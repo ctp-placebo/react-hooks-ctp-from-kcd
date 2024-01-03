@@ -25,7 +25,7 @@ class Board extends React.Component {
     const squaresCopy = [...squares]
     squaresCopy[square] = nextValue
     this.setState({squares: squaresCopy})
-  }l
+  }
   renderSquare = i => (
     <button className="square" onClick={() => this.selectSquare(i)}>
       {this.state.squares[i]}
