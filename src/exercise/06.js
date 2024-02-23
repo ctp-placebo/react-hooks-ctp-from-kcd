@@ -17,14 +17,14 @@ function PokemonInfo({pokemonName}) {
     // Use the `fetchPokemon` function to fetch a pokemon
     fetchPokemon(pokemonName).then(
       pokemon => setPokemon(pokemon),
-      error => setError(error)
+      error => setError(error),
       )
   }, [pokemonName])
 
   if (error) {
     return (
       <div role="alert">
-        There was an error: <pre style={{whiteSpace: 'normal', backgroundColor: '#00ff00'}}>{error.message}</pre>
+        There was an error: <pre style={{whiteSpace: 'normal', color: '#ffffff', backgroundColor: '#ff0000'}}>{error.message}</pre>
       </div>
     )
   }
